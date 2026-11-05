@@ -1,20 +1,22 @@
 # File: README.md
 
-#   Sales Multi-Ddtaset Analysis
-This script generates statistical analysis for 150 fictional loan records of a Mombasa
-microfinance institute. Plots and saves a histogram chart showing loan amounts in relation to number of loans.
+#   Sales Multi-Dataset Analysis
+
+This Python script cleans and merges sales data frame two datasets(august_sales, september_sales) into one dataframe.
+Then, it applies logic to analyze revenue across various region, comparing September to August sales.
+
 
 ## What It Does
 
 - Loads and combines sales datasets of two months
 - Cleans the dataset by standardizing column names
 - Applies logic to transform sales data into three categories(High, Medium, Low)
-- Identifies and prints the outliers(loan_id, amount)
-- Applies logic to calculate correlation between loan amount and days to repayment
 - Plots three charts fir visual representation of sales data
-- Saves the charts as PNG in one folder
+- Saves the charts as PNG in one folder(charts)
+
 
 ## Findings Summary
+
 Nairobi recorded highest revenue compared to other regions. 
 There was reduction in sales in September, compared to August.
 Majority of customers fall in the Low category
@@ -27,6 +29,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+
 Run the program from the project's folder
 
 ```
@@ -34,7 +37,6 @@ python analysis.py
 ```
 
 ## How it Works
-
 
 ```python
 combined = pd.concat([august, september], ignore_index=True)
@@ -60,5 +62,5 @@ Charts saved.
 ```
 
 ## Stack
-Python, Pandas, Numpy, Matplotlib, Scipy, OS
+Python, Pandas, Numpy, Matplotlib, OS
 
